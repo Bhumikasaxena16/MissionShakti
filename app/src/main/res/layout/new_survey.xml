@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/appbar_layout"/>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="1. Basic Details "
+                        android:textSize="@dimen/_11sdp"
+                        style="@style/TextViewSemiBoldBlack"
+                        android:textAlignment="textStart"/>
+
+                    <View
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_2sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@color/colorPrimary"/>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:hint="Name">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_business_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName|textCapWords"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:hint="Address">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_10sdp"
+                            android:maxLines="1"
+                            android:lines="1"
+                            android:layout_gravity="start"
+                            android:gravity="start"
+                            android:imeOptions="actionDone"
+                            android:inputType="textMultiLine|textCapSentences"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                            android:hint="District">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/auto_district"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/TextViewRegularNormal"
+                                android:inputType="textPersonName|textCapWords"/>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                            android:hint="State">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/auto_state"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/TextViewRegularNormal"
+                                android:inputType="textPersonName|textCapWords"/>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:hint="Pincode">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_pincode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:maxLength="6"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:hint="Contact Number">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_mobile_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:maxLength="10"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:hint="Udyog number">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_udyog_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="7526GM45"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:hint="Establishment Year">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_est_year"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:text="1995"
+                                android:maxLength="4"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_11sdp"
+                        style="@style/TextViewSemiBoldBlack"
+                        android:text="2. Business Details"
+                        android:textAlignment="textStart"/>
+
+                    <View
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_2sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:background="@color/colorPrimary"/>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        android:hint="Business Premises">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/auto_premises"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TextViewRegularNormal"
+                            android:inputType="textPersonName|textCapWords"/>
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="•	Nature of operation"
+                        style="@style/TextViewMediumBlack"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textSize="@dimen/_10sdp"/>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupNatureOfOperation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_micro"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Micro"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_small"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Small"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Medium"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"/>
+
+
+                    </RadioGroup>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="•	Type of Unit"
+                        style="@style/TextViewMediumBlack"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textSize="@dimen/_10sdp"/>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupTypeOfUnit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_perennial"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Perennial"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_seasonal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Seasonal"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_casual"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Casual"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"/>
+
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="•	Nature of job"
+                        style="@style/TextViewMediumBlack"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textSize="@dimen/_10sdp"/>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupNatureOfJob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_Unskilled"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Unskilled"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_semi_skilled"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Semi-Skilled"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_skilled"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Skilled"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"/>
+
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• Employment type"
+                        style="@style/TextViewMediumBlack"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textSize="@dimen/_10sdp"/>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupEmploymentType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Permanent"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Contractual"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Skilled"
+                            android:layout_weight="1"
+                            android:visibility="invisible"
+                            android:layout_gravity="center_horizontal"/>
+
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• Do you have Supplier/Vendor agreements?"
+                        style="@style/TextViewMediumBlack"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textSize="@dimen/_10sdp"/>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupVendorAgreement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Yes"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="No"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Skilled"
+                            android:layout_weight="1"
+                            android:visibility="invisible"
+                            android:layout_gravity="center_horizontal"/>
+
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• Have your suppliers increased over time?"
+                        style="@style/TextViewMediumBlack"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textSize="@dimen/_10sdp"/>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupSuppliersIncreased"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Yes"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="No"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Skilled"
+                            android:layout_weight="1"
+                            android:visibility="invisible"
+                            android:layout_gravity="center_horizontal"/>
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:layout_marginHorizontal="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_200sdp"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+</LinearLayout>

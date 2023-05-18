@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigationOne"
+        android:icon="@drawable/bottom_one_icon"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/navigationTwo"
+        android:icon="@drawable/bottom_two_icon"
+        android:title="Event"/>
+
+    <item
+        android:id="@+id/navigationThree"
+        android:icon="@drawable/bottom_three_icon"
+        android:title="Dashboard"/>
+
+    <item
+        android:id="@+id/navigationFour"
+        android:icon="@drawable/bottom_four_icon"
+        android:title="Profile"/>
+
+</menu>
