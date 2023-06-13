@@ -2,7 +2,7 @@
 
     <corners android:bottomLeftRadius="@dimen/_5sdp"
         android:bottomRightRadius="@dimen/_5sdp"/>
-    <gradient android:startColor="@color/colorPrimaryVariant"
+    <gradient android:startColor="@color/LightGreen"
         android:centerColor="@color/colorPrimaryVariant"
-        android:endColor="@color/colorPrimaryVariant" />
+        android:endColor="@color/DarkSeaGreen" />
 </shape>
