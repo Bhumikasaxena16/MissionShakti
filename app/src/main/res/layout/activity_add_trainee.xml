@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateEvent">
+    tools:context=".AddTrainee">
 
 
     <LinearLayout
@@ -25,22 +25,35 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                android:hint="Event Name">
+                android:hint="Enter Full Name">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_full_name"
+                    android:id="@+id/et_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName|textCapWords"/>
 
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tv_Select_district"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                android:hint="Select District">
+                android:hint="Enter Father Name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_father_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName|textCapWords"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:hint="Enter Mobile Number">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -48,46 +61,50 @@
                     android:inputType="textPersonName|textCapWords"/>
 
             </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:hint="Enter Mail ID">
 
-           <LinearLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName|textCapWords"/>
 
-               <com.google.android.material.textfield.TextInputLayout
-                   android:id="@+id/tv_Start_Date"
-                   android:layout_width="0dp"
-                   android:layout_height="wrap_content"
-                   android:layout_weight="1"
-                   android:layout_marginEnd="@dimen/_10sdp"
-                   android:layout_marginTop="@dimen/_10sdp"
-                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                   android:hint="Start Date">
+            </com.google.android.material.textfield.TextInputLayout>
 
-                   <com.google.android.material.textfield.TextInputEditText
-                       android:layout_width="match_parent"
-                       android:layout_height="wrap_content"
-                       android:inputType="textPersonName|textCapWords"/>
+            <TextView
+                android:id="@+id/mudra_loan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Have you applied for a Mudra Loan?"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                />
 
-               </com.google.android.material.textfield.TextInputLayout>
-               <com.google.android.material.textfield.TextInputLayout
-                   android:id="@+id/tv_end_Date"
-                   android:layout_width="0dp"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="@dimen/_10sdp"
-                   android:layout_weight="1"
-                   android:layout_marginStart="5dp"
-                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                   android:hint="End Date">
+            <RadioGroup
+                android:id="@+id/rg_yes_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes"/>
 
-                   <com.google.android.material.textfield.TextInputEditText
-                       android:layout_width="match_parent"
-                       android:layout_height="wrap_content"
-                       android:inputType="textPersonName|textCapWords"/>
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No"/>
 
-               </com.google.android.material.textfield.TextInputLayout>
+            </RadioGroup>
 
-           </LinearLayout>
 
 
 
@@ -111,16 +128,24 @@
                     android:inputType="textMultiLine|textCapSentences"/>
 
             </com.google.android.material.textfield.TextInputLayout>
+
+
             <Button
-                android:id="@+id/btn_create_event"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:text="Create Event"/>
+                android:text="Register"/>
+
+
+
+
+
 
         </LinearLayout>
 
     </LinearLayout>
+
+
 
 
 </LinearLayout>
